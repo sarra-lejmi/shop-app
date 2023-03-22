@@ -34,20 +34,22 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
-            primarySwatch: Colors.purple,
-            fontFamily: "Lato",
-            colorScheme: ThemeData().colorScheme.copyWith(
-                  secondary: Colors.deepOrange,
-                ),
-            appBarTheme: const AppBarTheme(backgroundColor: Colors.purple),
-            inputDecorationTheme: const InputDecorationTheme(
-              focusedBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: Colors.purple),
+          primarySwatch: Colors.purple,
+          fontFamily: "Lato",
+          colorScheme: ThemeData().colorScheme.copyWith(
+                primary: Colors.deepOrange,
+                secondary: Colors.deepOrange,
               ),
-              labelStyle: TextStyle(color: Colors.purple),
+          appBarTheme: const AppBarTheme(backgroundColor: Colors.purple),
+          inputDecorationTheme: const InputDecorationTheme(
+            focusedBorder: UnderlineInputBorder(
+              borderSide: BorderSide(color: Colors.purple),
             ),
-            textSelectionTheme:
-                const TextSelectionThemeData(cursorColor: Colors.purple)),
+            labelStyle: TextStyle(color: Colors.purple),
+          ),
+          textSelectionTheme:
+              const TextSelectionThemeData(cursorColor: Colors.purple),
+        ),
         home: const ProductOverviewScreen(),
         routes: {
           productDetailsRoute: (context) => const ProductDetailsScreen(),
