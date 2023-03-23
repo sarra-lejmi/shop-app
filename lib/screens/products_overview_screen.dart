@@ -18,6 +18,7 @@ class ProductOverviewScreen extends StatefulWidget {
 
 class _ProductOverviewScreenState extends State<ProductOverviewScreen> {
   var _showOnlyFavorites = false;
+  // var _isInit = true;
   Future? _productsFuture;
 
   Future _obtainProductsFuture() {
@@ -29,6 +30,15 @@ class _ProductOverviewScreenState extends State<ProductOverviewScreen> {
     _productsFuture = _obtainProductsFuture();
     super.initState();
   }
+
+  // @override
+  // void didChangeDependencies() {
+  //   if (_isInit) {
+  //     _productsFuture = _obtainProductsFuture();
+  //   }
+  //   _isInit = false;
+  //   super.didChangeDependencies();
+  // }
 
   @override
   Widget build(BuildContext context) {
